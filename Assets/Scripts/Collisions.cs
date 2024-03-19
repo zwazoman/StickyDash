@@ -7,6 +7,7 @@ public class Collisions : MonoBehaviour
     Rigidbody2D rb;
     [SerializeField] LayerMask layerMask;
     [SerializeField] Dash dashScript;
+    GameObject lever;
 
     private void Awake()
     {
@@ -19,6 +20,29 @@ public class Collisions : MonoBehaviour
         rb.velocity = Vector2.zero;
         rb.simulated = false;
         print("au mur");
+        if (collision.gameObject.layer == 7) // si win object
+        {
+            print("you won");
+            //panel win
+            Time.timeScale = 0;
+        }
+        if (collision.gameObject.layer == 8) // si pics
+        {
+            print("you Died");
+            //panel loose
+            Time.timeScale = 0;
+        }
+        if (collision.gameObject.layer == 9) // si bumper
+        {
+            //son boing
+            GameObject bumper = collision.gameObject;
+            rb.velocity = dashScript.dashDirection;
+        }
+        if (collision.gameObject.layer == 10) // si levier
+        {
+            lever = collision.gameObject;
+            lever.SendMessage("Connard");
+        }
     }
 
 }
