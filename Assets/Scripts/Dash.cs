@@ -9,11 +9,11 @@ public class Dash : MonoBehaviour
     internal bool onLeft;
     internal bool onRight;
     internal bool canDash = true;
-    float rayLength = 1f;
+    public int dashLimit;
+    float rayLength = 0.19f;
     public LayerMask layerMask;
     Rigidbody2D rb;
     [SerializeField] float dashForce;
-    //METS TOUT EN TRIGGER FDP
 
     private void Awake()
     {
@@ -28,7 +28,7 @@ public class Dash : MonoBehaviour
                 Vector3 mouseWorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 mouseWorldPosition.z = 0;
                 Vector3 dashDirection = mouseWorldPosition - transform.position;
-                if (Physics2D.Raycast(transform.position, Vector2.down, rayLength, layerMask.value)/*onTop*/ && mouseWorldPosition.y<transform.position.y)
+                if (Physics2D.Raycast(transform.position, Vector2.down, rayLength, layerMask.value)/*onTop*/ && mouseWorldPosition.y < transform.position.y)
                 {
                     print("nope");
                     return;
@@ -48,9 +48,16 @@ public class Dash : MonoBehaviour
                     print("nope");
                     return;
                 }
+                rb.simulated = true;
                 rb.velocity = dashDirection.normalized * dashForce;
-                //transform.Translate(dashDirection * dashForce * Time.deltaTime);
                 canDash = false;
+                dashLimit -= 1;
+                if (dashLimit < 0)
+                {
+                    //panel lose
+                    print("plus de dash");
+                    Time.timeScale = 0;
+                }
                 print("dash");
                 //son dash
             }
