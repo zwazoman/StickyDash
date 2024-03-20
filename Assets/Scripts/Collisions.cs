@@ -18,7 +18,7 @@ public class Collisions : MonoBehaviour
     {
         dashScript.canDash = true;
         rb.velocity = Vector2.zero;
-        rb.simulated = false;
+        //rb.simulated = false;
         print("au mur");
         if (collision.gameObject.layer == 7) // si win object
         {
