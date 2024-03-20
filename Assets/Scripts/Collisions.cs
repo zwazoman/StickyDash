@@ -17,10 +17,14 @@ public class Collisions : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        dashScript.canDash = true;
-        rb.velocity = Vector2.zero;
-        rb.constraints = RigidbodyConstraints2D.FreezePosition;
-        print("au mur");
+        if (collision.gameObject.layer == 6)
+        {
+            dashScript.canDash = true;
+            rb.velocity = Vector2.zero;
+            rb.constraints = RigidbodyConstraints2D.FreezePosition;
+            print("collé au mur");
+        }
+
         if (collision.gameObject.tag == "Win") // si win object
         {
             print("you won");
