@@ -2,14 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class Dash : MonoBehaviour
 {
     internal bool canDash = true;
-    public int dashLimit;
+    [HideInInspector] public int dashLimit;
     float rayLength = 0.19f;
     public LayerMask layerMask;
-    [SerializeField] TMP_Text dashLimitText;
+    public TMP_Text dashLimitText;
     Rigidbody2D rb;
     public Vector3 dashDirection;
     [SerializeField] float dashForce;
@@ -17,6 +18,7 @@ public class Dash : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        dashLimitText = GameObject.Find("DashLimitText").GetComponent<TMP_Text>();
     }
     private void Start()
     {
@@ -24,6 +26,8 @@ public class Dash : MonoBehaviour
     }
     private void Update()
     {
+        if (Time.timeScale == 0) return; 
+      
         if (Input.GetMouseButtonDown(0))
         {
             if (canDash) 

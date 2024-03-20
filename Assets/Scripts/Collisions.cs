@@ -21,17 +21,17 @@ public class Collisions : MonoBehaviour
         rb.velocity = Vector2.zero;
         rb.constraints = RigidbodyConstraints2D.FreezePosition;
         print("au mur");
-        if (collision.gameObject.layer == 7) // si win object
+        if (collision.gameObject.tag == "Win") // si win object
         {
             print("you won");
             //panel win
             Time.timeScale = 0;
         }
-        if (collision.gameObject.layer == 8) // si pics
+        if (collision.gameObject.tag == "Spikes") // si pics
         {
+            print("meurs");
             death.Kill();
             //panel loose
-            Time.timeScale = 0;
         }
         if (collision.gameObject.layer == 9) // si bumper
         {
