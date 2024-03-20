@@ -57,7 +57,8 @@ public class Dash : MonoBehaviour
                     print("plus de dash");
                     return;
                 }
-                rb.simulated = true;
+                rb.constraints = RigidbodyConstraints2D.None;
+                rb.constraints = RigidbodyConstraints2D.FreezeRotation;
                 rb.velocity = dashDirection.normalized * dashForce;
                 canDash = false;
                 dashLimit -= 1;

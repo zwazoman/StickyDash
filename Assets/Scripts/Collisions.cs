@@ -5,6 +5,7 @@ using UnityEngine;
 public class Collisions : MonoBehaviour
 {
     Rigidbody2D rb;
+    [SerializeField] Death death;
     [SerializeField] LayerMask layerMask;
     [SerializeField] Dash dashScript;
     GameObject lever;
@@ -18,7 +19,7 @@ public class Collisions : MonoBehaviour
     {
         dashScript.canDash = true;
         rb.velocity = Vector2.zero;
-        //rb.simulated = false;
+        rb.constraints = RigidbodyConstraints2D.FreezePosition;
         print("au mur");
         if (collision.gameObject.layer == 7) // si win object
         {
@@ -28,7 +29,7 @@ public class Collisions : MonoBehaviour
         }
         if (collision.gameObject.layer == 8) // si pics
         {
-            print("you Died");
+            death.Kill();
             //panel loose
             Time.timeScale = 0;
         }
