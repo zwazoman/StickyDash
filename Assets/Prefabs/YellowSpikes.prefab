@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 318898148239771332}
   - component: {fileID: 633573275795005527}
   - component: {fileID: 8745817543803711985}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: YellowSpikes
-  m_TagString: Untagged
+  m_TagString: Spikes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
