@@ -8,6 +8,7 @@ TagManager:
   - Win
   - DashLimit
   - DeathMeter
+  - Lever
   layers:
   - Default
   - TransparentFX
@@ -18,8 +19,8 @@ TagManager:
   - Sticky Wall
   - Win
   - Spikes
-  - 
-  - 
+  - Bumper
+  - Lever
   - 
   - 
   - 
