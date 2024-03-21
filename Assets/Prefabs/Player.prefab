@@ -1245,7 +1245,7 @@ GameObject:
   - component: {fileID: -1034200012959800993}
   m_Layer: 2
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1278,13 +1278,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a8dbe0ae3a49df4c8e73ac5b21d279e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dashLimit: 5
+  dashLimit: 55
   layerMask:
     serializedVersion: 2
     m_Bits: 64
   dashLimitText: {fileID: 0}
   dashDirection: {x: 0, y: 0, z: 0}
   dashForce: 10
+  dashSmokeParticle: {fileID: 4818315633736996638, guid: b8cb100bfa7052742814f5bdfab598c9, type: 3}
 --- !u!114 &8518040581940154656
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1302,6 +1303,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   dashScript: {fileID: 5099695722849869022}
+  hitWallParticle: {fileID: 2840178208703127455, guid: fd1e3c434cf9f1e4b87649df1a5a0350, type: 3}
 --- !u!114 &7186031076960533380
 MonoBehaviour:
   m_ObjectHideFlags: 0

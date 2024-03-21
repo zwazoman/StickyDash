@@ -7,7 +7,7 @@ public class Pause : MonoBehaviour
 {
     [SerializeField] GameObject pausePanel;
     public int deathMeter;
-    [SerializeField] TMP_Text deathMeterText;
+    public TMP_Text deathMeterText;
     Spawn spawn;
 
     private void Awake()

@@ -9,6 +9,11 @@ public class Lever : MonoBehaviour
 
     SpriteRenderer SR;
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        collision.gameObject.SendMessage("ActivateLevers");
+    }
+
     private void Awake()
     {
         SR = GetComponent<SpriteRenderer>();

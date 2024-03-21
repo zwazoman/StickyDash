@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8369422730471384643}
   - component: {fileID: 1572621476611860443}
   - component: {fileID: 6500944587309427219}
+  - component: {fileID: 8165736178709023030}
   m_Layer: 6
   m_Name: Win
   m_TagString: Win
@@ -130,3 +131,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &8165736178709023030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1520838770519959392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28e97b49f2e821843857e10a1442851b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  winPanel: {fileID: 0}

@@ -14,6 +14,7 @@ public class Dash : MonoBehaviour
     Rigidbody2D rb;
     public Vector3 dashDirection;
     [SerializeField] float dashForce;
+    [SerializeField] GameObject dashSmokeParticle;
 
     private void Awake()
     {
@@ -63,6 +64,7 @@ public class Dash : MonoBehaviour
                 }
                 rb.constraints = RigidbodyConstraints2D.None;
                 rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+                Instantiate(dashSmokeParticle, transform.position, Quaternion.identity);
                 rb.velocity = dashDirection.normalized * dashForce;
                 canDash = false;
                 dashLimit -= 1;
