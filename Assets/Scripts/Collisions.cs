@@ -40,13 +40,11 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.layer == 9) // si bumper
         {
             //son boing
-            GameObject bumper = collision.gameObject;
-            rb.velocity = dashScript.dashDirection;
         }
-        if (collision.gameObject.layer == 10) // si levier
+        if (collision.gameObject.tag == "Lever") // si levier
         {
             lever = collision.gameObject;
-            lever.SendMessage("Connard");
+            lever.SendMessage("Activate");
         }
     }
 
