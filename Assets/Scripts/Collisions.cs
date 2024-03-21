@@ -8,11 +8,13 @@ public class Collisions : MonoBehaviour
     [SerializeField] Death death;
     [SerializeField] LayerMask layerMask;
     [SerializeField] Dash dashScript;
+    [SerializeField] LeverList leverList;
     GameObject lever;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        leverList = FindObjectOfType<LeverList>();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -43,8 +45,7 @@ public class Collisions : MonoBehaviour
         }
         if (collision.gameObject.tag == "Lever") // si levier
         {
-            lever = collision.gameObject;
-            lever.SendMessage("Activate");
+            leverList.AllLevers();
         }
     }
 
