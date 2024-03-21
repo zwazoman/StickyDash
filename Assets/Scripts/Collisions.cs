@@ -8,7 +8,7 @@ public class Collisions : MonoBehaviour
     [SerializeField] Death death;
     [SerializeField] LayerMask layerMask;
     [SerializeField] Dash dashScript;
-    [SerializeField] LeverList leverList;
+    LeverList leverList;
     GameObject lever;
 
     private void Awake()
