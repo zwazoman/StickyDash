@@ -853,6 +853,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bumper
       objectReference: {fileID: 0}
+    - target: {fileID: 7439027104864744441, guid: 69cf17731e6f9af4fa72075de50bfcc6, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1427,6 +1431,18 @@ PrefabInstance:
     - target: {fileID: 5237499989435074635, guid: 59735ac37eac4624da8c0d9fedef6b0b, type: 3}
       propertyPath: m_LocalPosition.y
       value: 4.54
+      objectReference: {fileID: 0}
+    - target: {fileID: 5783358145031953288, guid: 59735ac37eac4624da8c0d9fedef6b0b, type: 3}
+      propertyPath: m_Pivot.x
+      value: 1.7884638
+      objectReference: {fileID: 0}
+    - target: {fileID: 5783358145031953288, guid: 59735ac37eac4624da8c0d9fedef6b0b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 233
+      objectReference: {fileID: 0}
+    - target: {fileID: 5783358145031953288, guid: 59735ac37eac4624da8c0d9fedef6b0b, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -350
       objectReference: {fileID: 0}
     - target: {fileID: 6743070953873900919, guid: 59735ac37eac4624da8c0d9fedef6b0b, type: 3}
       propertyPath: m_ConnectedAnchor.x
