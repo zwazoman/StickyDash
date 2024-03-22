@@ -11,11 +11,13 @@ public class Death : MonoBehaviour
     Pause pause;
     LeverList leverList;
     [SerializeField] Infos infos;
+    AudioSource audioSource;
     private void Awake()
     {
         spawn = FindObjectOfType<Spawn>();
         pause = FindObjectOfType<Pause>();
         leverList = FindObjectOfType<LeverList>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -35,7 +37,7 @@ public class Death : MonoBehaviour
         foreach (Explode explode in explodeList)
         {
             explode.gameObject.transform.parent = null;
-            AudioManager.Instance.PlaySFX(AudioManager.Instance.deathSound,0.2f,1);
+            audioSource.Play();
             explode.Scatter();
         }
         spawn.Respawn();
