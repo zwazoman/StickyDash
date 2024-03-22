@@ -27,7 +27,7 @@ public class Collisions : MonoBehaviour
             rb.constraints = RigidbodyConstraints2D.FreezePosition;
             GameObject particle = Instantiate(hitWallParticle,transform.position,Quaternion.identity);
             Destroy(particle,1);
-            AudioManager.Instance.PlaySFX(AudioManager.Instance.impactSound,1,1);
+            AudioManager.Instance.PlaySFX(AudioManager.Instance.impactSound, 1, Random.Range(0.8f, 1.2f));
             print("collé au mur");
         }
         if (collision.gameObject.tag == "Win") // si win object
