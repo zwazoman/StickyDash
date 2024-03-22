@@ -25,8 +25,6 @@ public class Collisions : MonoBehaviour
             dashScript.canDash = true;
             rb.velocity = Vector2.zero;
             rb.constraints = RigidbodyConstraints2D.FreezePosition;
-            GameObject particle = Instantiate(hitWallParticle,transform.position,Quaternion.identity);
-            Destroy(particle,1);
             AudioManager.Instance.PlaySFX(AudioManager.Instance.impactSound, 1, Random.Range(0.8f, 1.2f));
             print("collé au mur");
         }
@@ -36,6 +34,7 @@ public class Collisions : MonoBehaviour
         }
         if (collision.gameObject.tag == "Spikes") // si pics
         {
+            print("pics");
             death.Kill();
         }
         if (collision.gameObject.layer == 9) // si bumper
