@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class Spawn : MonoBehaviour
 {
-    [SerializeField] GameObject initialPlayer;
+    [SerializeField] GameObject spawnPoint;
     [SerializeField] GameObject playerPrefab;
     [SerializeField] Infos infos;
     internal GameObject player;
-    Vector2 initialPlayerPosition;
-    Quaternion initialPlayerRotation;
+    Vector2 spawnPosition;
+    Quaternion spawnRotation;
 
     private void Awake()
     {
@@ -17,13 +17,14 @@ public class Spawn : MonoBehaviour
     }
     void Start()
     {
-        initialPlayerPosition = initialPlayer.transform.position;
-        initialPlayerRotation = initialPlayer.transform.rotation;
+        spawnPosition = spawnPoint.transform.position;
+        spawnRotation = spawnPoint.transform.rotation;
+        player = Instantiate(playerPrefab, spawnPosition, spawnRotation);
     }
 
     public void Respawn()
     {
-        player = Instantiate(playerPrefab, initialPlayerPosition, initialPlayerRotation);
+        player = Instantiate(playerPrefab, spawnPosition, spawnRotation);
         infos.Respawn();
     }
 }

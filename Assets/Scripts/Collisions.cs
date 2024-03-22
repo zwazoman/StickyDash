@@ -8,11 +8,14 @@ public class Collisions : MonoBehaviour
     [SerializeField] Death death;
     [SerializeField] LayerMask layerMask;
     [SerializeField] Dash dashScript;
+    [SerializeField] GameObject hitWallParticle;
+    LeverList leverList;
     GameObject lever;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        leverList = FindObjectOfType<LeverList>();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -22,30 +25,29 @@ public class Collisions : MonoBehaviour
             dashScript.canDash = true;
             rb.velocity = Vector2.zero;
             rb.constraints = RigidbodyConstraints2D.FreezePosition;
+            GameObject particle = Instantiate(hitWallParticle,transform.position,Quaternion.identity);
+            //Destroy(particle,1);
             print("collé au mur");
         }
 
         if (collision.gameObject.tag == "Win") // si win object
         {
-            print("you won");
             //panel win
             Time.timeScale = 0;
         }
         if (collision.gameObject.tag == "Spikes") // si pics
         {
-            print("meurs");
             death.Kill();
-            //panel loose
         }
         if (collision.gameObject.layer == 9) // si bumper
         {
             //son boing
         }
-        if (collision.gameObject.tag == "Lever") // si levier
-        {
-            lever = collision.gameObject;
-            lever.SendMessage("Activate");
-        }
+    }
+
+    public void ActivateLevers()
+    {
+        leverList.AllLevers();
     }
 
 }

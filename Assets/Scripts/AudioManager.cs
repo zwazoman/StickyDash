@@ -15,7 +15,14 @@ public class AudioManager : MonoBehaviour
     [Header("Musics")]
     public AudioClip music;
     [Header("SFX")]
-    public AudioClip SFXClip;
+    public AudioClip dashSound;
+    public AudioClip impactSound;
+    public AudioClip buttonClickSound;
+    public AudioClip leverSound;
+    public AudioClip bumperSound;
+    public AudioClip deathSound;
+    public AudioClip winSound;
+    public AudioClip startSound;
 
 
     private void Awake()
