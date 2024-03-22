@@ -24,5 +24,6 @@ public class Win : MonoBehaviour
     {
         Time.timeScale = 1;
         winPanel.SetActive(false);
+        pause.deathMeter = 0;
     }
 }
