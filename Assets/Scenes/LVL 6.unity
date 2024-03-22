@@ -3875,6 +3875,14 @@ PrefabInstance:
       propertyPath: yellowWalls.Array.data[10]
       value: 
       objectReference: {fileID: 1212822183}
+    - target: {fileID: 2759090924341548877, guid: 59735ac37eac4624da8c0d9fedef6b0b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3016674737703511326, guid: 59735ac37eac4624da8c0d9fedef6b0b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 185
+      objectReference: {fileID: 0}
     - target: {fileID: 3099400047381089037, guid: 59735ac37eac4624da8c0d9fedef6b0b, type: 3}
       propertyPath: m_ConnectedAnchor.x
       value: 0.6199979
@@ -3967,6 +3975,10 @@ PrefabInstance:
       propertyPath: m_ConnectedAnchor.y
       value: -0.68530476
       objectReference: {fileID: 0}
+    - target: {fileID: 7039279373056441632, guid: 59735ac37eac4624da8c0d9fedef6b0b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -110
+      objectReference: {fileID: 0}
     - target: {fileID: 7837788272139068117, guid: 59735ac37eac4624da8c0d9fedef6b0b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.801558
@@ -4032,7 +4044,8 @@ PrefabInstance:
       value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 1578472708641707482, guid: 59735ac37eac4624da8c0d9fedef6b0b, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 59735ac37eac4624da8c0d9fedef6b0b, type: 3}

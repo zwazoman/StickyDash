@@ -1520,11 +1520,38 @@ PrefabInstance:
       propertyPath: m_ConnectedAnchor.y
       value: 1.4700031
       objectReference: {fileID: 0}
+    - target: {fileID: 9006542868664322576, guid: 59735ac37eac4624da8c0d9fedef6b0b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1582507552}
+    - target: {fileID: 9006542868664322576, guid: 59735ac37eac4624da8c0d9fedef6b0b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Lvl4
+      objectReference: {fileID: 0}
+    - target: {fileID: 9006542868664322576, guid: 59735ac37eac4624da8c0d9fedef6b0b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SwitchScene, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 9006542868664322576, guid: 59735ac37eac4624da8c0d9fedef6b0b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 59735ac37eac4624da8c0d9fedef6b0b, type: 3}
+--- !u!114 &1582507552 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3365328749760964593, guid: 59735ac37eac4624da8c0d9fedef6b0b, type: 3}
+  m_PrefabInstance: {fileID: 1582507551}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1cca4676cd3c7745b63215925085519, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1610310604
 GameObject:
   m_ObjectHideFlags: 0
