@@ -20,10 +20,12 @@ public class Lever : MonoBehaviour
     }
     public void Activate()
     {
+        AudioManager.Instance.PlaySFX(AudioManager.Instance.leverSound, 1, 1);
         SR.sprite = leverDesactivated;
     }
     public void Desactivate()
     {
+        AudioManager.Instance.PlaySFX2(AudioManager.Instance.leverSound, 1, 1);
         SR.sprite = leverActivated;
     }
 

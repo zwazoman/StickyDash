@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using Cinemachine;
 
 public class Dash : MonoBehaviour
 {
@@ -15,11 +16,13 @@ public class Dash : MonoBehaviour
     public Vector3 dashDirection;
     [SerializeField] float dashForce;
     [SerializeField] GameObject dashSmokeParticle;
+    [SerializeField] CinemachineImpulseSource impulseSource;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         dashLimitText = GameObject.Find("DashLimitText").GetComponent<TMP_Text>();
+        impulseSource = GetComponent<CinemachineImpulseSource>();
     }
     private void Start()
     {
@@ -58,19 +61,21 @@ public class Dash : MonoBehaviour
                 }
                 if (dashLimit <= 0)
                 {
-                    //panel lose
                     print("plus de dash");
                     return;
                 }
                 rb.constraints = RigidbodyConstraints2D.None;
                 rb.constraints = RigidbodyConstraints2D.FreezeRotation;
-                Instantiate(dashSmokeParticle, transform.position, Quaternion.identity);
+                GameObject smoke = Instantiate(dashSmokeParticle, transform.position, Quaternion.identity);
+                Destroy(smoke, 1);
+                impulseSource.GenerateImpulseWithForce(0.1f);
+                AudioManager.Instance.PlaySFX(AudioManager.Instance.dashSound,1,1);
                 rb.velocity = dashDirection.normalized * dashForce;
                 canDash = false;
                 dashLimit -= 1;
                 dashLimitText.text = dashLimit.ToString();
                 print("dash");
-                //son dash
+
             }
             else
             {

@@ -273,8 +273,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicSource: {fileID: 8312049387561074958}
   SFXSource: {fileID: 3896836942324215778}
-  music: {fileID: 0}
-  SFXClip: {fileID: 0}
+  SFXSource2: {fileID: 6632535988958769912}
+  music: {fileID: 8300000, guid: 6d5281934d4bb9f45ba21fca5b77eabe, type: 3}
+  dashSound: {fileID: 8300000, guid: 18488d86c01561044a7601f27438611f, type: 3}
+  impactSound: {fileID: 8300000, guid: 02fed9c23879cc648a50638c3b2d18ee, type: 3}
+  buttonClickSound: {fileID: 0}
+  leverSound: {fileID: 8300000, guid: 3cc7726d8feb33e40b45e8f5eaf8bfd8, type: 3}
+  bumperSound: {fileID: 8300000, guid: f9b833befdef87e43baf8b8e4d37a6fe, type: 3}
+  deathSound: {fileID: 8300000, guid: c5dee1bd670e1d64dade33ae63649678, type: 3}
+  winSound: {fileID: 8300000, guid: 773a2975d50529343b81dfaec99e8b67, type: 3}
+  startSound: {fileID: 8300000, guid: 722d922a99dc3c746a70a45ee14114db, type: 3}
+  corpseSound: {fileID: 0}
 --- !u!1 &227692483498938989
 GameObject:
   m_ObjectHideFlags: 0
@@ -1074,6 +1083,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2831602901443211997}
   - component: {fileID: 8312049387561074958}
+  - component: {fileID: 6632535988958769912}
   m_Layer: 0
   m_Name: SFX
   m_TagString: Untagged
@@ -1097,6 +1107,102 @@ Transform:
   m_Father: {fileID: 4441401986856032564}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &8312049387561074958
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2103373106376764190}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 0.8
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!82 &6632535988958769912
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1359,7 +1465,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.8
   m_Pitch: 1
   Loop: 0
   Mute: 0

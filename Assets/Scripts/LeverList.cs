@@ -11,7 +11,7 @@ public class LeverList : MonoBehaviour
     [SerializeField] Sprite disabledYellowWall;
     [SerializeField] Sprite enabledPurpleWall;
     [SerializeField] Sprite disabledPurpleWall;
-    bool activeLever = true;
+    public bool activeLever = true;
 
     public void AllLevers()
     {

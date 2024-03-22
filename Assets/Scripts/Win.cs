@@ -13,6 +13,7 @@ public class Win : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
+            AudioManager.Instance.PlaySFX(AudioManager.Instance.winSound, 1, 1);
             Time.timeScale = 0;
             winPanel.SetActive(true);
             deathMeter.text = pause.deathMeter.ToString() + " tries";

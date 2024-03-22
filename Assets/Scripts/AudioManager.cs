@@ -11,6 +11,7 @@ public class AudioManager : MonoBehaviour
     [Header("AudioSources")]
     [SerializeField] AudioSource musicSource;
     [SerializeField] AudioSource SFXSource;
+    [SerializeField] AudioSource SFXSource2;
 
     [Header("Musics")]
     public AudioClip music;
@@ -23,6 +24,7 @@ public class AudioManager : MonoBehaviour
     public AudioClip deathSound;
     public AudioClip winSound;
     public AudioClip startSound;
+    public AudioClip corpseSound;
 
 
     private void Awake()
@@ -44,9 +46,18 @@ public class AudioManager : MonoBehaviour
     {
         musicSource.clip = music;
         musicSource.Play();
+        PlaySFX(startSound, 1, 1);
     }
-    public void PlaySFX(AudioClip clip, float _pitch = 1, float _volume = 1)
+    public void PlaySFX(AudioClip clip, float _volume, float _pitch)
     {
+        SFXSource.volume = _volume;
+        SFXSource.pitch = _pitch;
         SFXSource.PlayOneShot(clip);
+    }
+    public void PlaySFX2(AudioClip clip, float _volume, float _pitch)
+    {
+        SFXSource2.volume = _volume;
+        SFXSource2.pitch = _pitch;
+        SFXSource2.PlayOneShot(clip);
     }
 }
